@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  TournamentFetcher.swift
 //  NYT Madness 2016
 //
 //  Created by Brashear, Alex on 3/18/16.
@@ -8,30 +8,27 @@
 
 import Foundation
 
-let URLString = "http://10.51.221.205:8080/bracket.json"
+let tournamentSourceURL = "http://10.51.221.205:8080/tournament.json"
 
 func fetchPlayers(completion:([Player?]) -> ()) {
     let URL = NSURL(string: URLString)
     let request = NSURLRequest(URL: URL!)
-
+    
     NSURLSession.sharedSession().dataTaskWithRequest(request) { (data:NSData?, response: NSURLResponse?, error: NSError?) -> Void in
-        var brackets = [Player?]()
+        var players = [Player?]()
         if let realData = data {
             do {
-                let object = try NSJSONSerialization.JSONObjectWithData(realData, options: NSJSONReadingOptions.AllowFragments) as! Array<AnyObject>
                 let tournament = Tournament()
                 let playerParser = PlayerParser(tournament:tournament)
+                let object = try NSJSONSerialization.JSONObjectWithData(realData, options: NSJSONReadingOptions.AllowFragments) as! Array<AnyObject>
                 for playerDictionary in object {
-                    if let bracket = playerParser.parsePlayer(playerDictionary as! Dictionary<String, AnyObject>) {
-                        brackets.append(bracket)
-                    }
-                }
-
+                    players.append(playerParser.parsePlayer(playerDictionary as! Dictionary<String, AnyObject>))                }
+                
             }catch {
                 
             }
         }
-        completion(brackets)
-        
+        completion(players)
+
         }.resume()
 }
