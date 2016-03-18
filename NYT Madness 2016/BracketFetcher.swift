@@ -10,22 +10,26 @@ import Foundation
 
 let URLString = "http://10.51.221.205:8080/bracket.json"
 
-func fetchBrackets(completion:(Bracket?) -> ()) {
+func fetchBrackets(completion:([Bracket?]) -> ()) {
     let URL = NSURL(string: URLString)
     let request = NSURLRequest(URL: URL!)
 
     NSURLSession.sharedSession().dataTaskWithRequest(request) { (data:NSData?, response: NSURLResponse?, error: NSError?) -> Void in
-        var bracket: Bracket?
+        let brackets = [Bracket?]()
         if let realData = data {
-            
             do {
                 let object = try NSJSONSerialization.JSONObjectWithData(realData, options: NSJSONReadingOptions.AllowFragments) as! Array<AnyObject>
-                bracket = parseBracket(object)
+                for bracketDictionary in object {
+                    if let bracket = parseBracket(bracketDictionary) {
+                        brackets.append(bracket)
+                    }
+                }
+
             }catch {
                 
             }
         }
-        completion(bracket)
+        completion(brackets)
         
         }.resume()
 }
