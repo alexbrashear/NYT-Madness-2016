@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		D66D73FD1C9C58E100039097 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66D73FC1C9C58E100039097 /* AppDelegate.swift */; };
-		D66D73FF1C9C58E100039097 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66D73FE1C9C58E100039097 /* ViewController.swift */; };
 		D66D74021C9C58E100039097 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D66D74001C9C58E100039097 /* Main.storyboard */; };
 		D66D74041C9C58E100039097 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D66D74031C9C58E100039097 /* Assets.xcassets */; };
 		D66D74071C9C58E100039097 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D66D74051C9C58E100039097 /* LaunchScreen.storyboard */; };
 		D66D74121C9C58E100039097 /* NYT_Madness_2016Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66D74111C9C58E100039097 /* NYT_Madness_2016Tests.swift */; };
 		D66D741D1C9C58E100039097 /* NYT_Madness_2016UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66D741C1C9C58E100039097 /* NYT_Madness_2016UITests.swift */; };
+		D66D742B1C9C5A6F00039097 /* StandingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66D742A1C9C5A6F00039097 /* StandingsTableViewController.swift */; };
+		D66D742D1C9C5B2A00039097 /* BracketFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66D742C1C9C5B2A00039097 /* BracketFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,6 @@
 /* Begin PBXFileReference section */
 		D66D73F91C9C58E100039097 /* NYT Madness 2016.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NYT Madness 2016.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D66D73FC1C9C58E100039097 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D66D73FE1C9C58E100039097 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D66D74011C9C58E100039097 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D66D74031C9C58E100039097 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D66D74061C9C58E100039097 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +47,8 @@
 		D66D74181C9C58E100039097 /* NYT Madness 2016UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NYT Madness 2016UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D66D741C1C9C58E100039097 /* NYT_Madness_2016UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYT_Madness_2016UITests.swift; sourceTree = "<group>"; };
 		D66D741E1C9C58E100039097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D66D742A1C9C5A6F00039097 /* StandingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandingsTableViewController.swift; sourceTree = "<group>"; };
+		D66D742C1C9C5B2A00039097 /* BracketFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BracketFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				D66D73FC1C9C58E100039097 /* AppDelegate.swift */,
-				D66D73FE1C9C58E100039097 /* ViewController.swift */,
+				D66D742A1C9C5A6F00039097 /* StandingsTableViewController.swift */,
+				D66D742C1C9C5B2A00039097 /* BracketFetcher.swift */,
 				D66D74001C9C58E100039097 /* Main.storyboard */,
 				D66D74031C9C58E100039097 /* Assets.xcassets */,
 				D66D74051C9C58E100039097 /* LaunchScreen.storyboard */,
@@ -256,8 +259,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D66D73FF1C9C58E100039097 /* ViewController.swift in Sources */,
 				D66D73FD1C9C58E100039097 /* AppDelegate.swift in Sources */,
+				D66D742D1C9C5B2A00039097 /* BracketFetcher.swift in Sources */,
+				D66D742B1C9C5A6F00039097 /* StandingsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
