@@ -8,6 +8,6 @@
 
 import Foundation
 
-func parseBracket(dictionary: Dictionary) -> Bracket {
-    
-}
+//func parseBracket() -> Bracket {
+//    
+//}
