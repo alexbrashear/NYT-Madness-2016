@@ -15,6 +15,11 @@
 		D66D741D1C9C58E100039097 /* NYT_Madness_2016UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66D741C1C9C58E100039097 /* NYT_Madness_2016UITests.swift */; };
 		D66D742B1C9C5A6F00039097 /* StandingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66D742A1C9C5A6F00039097 /* StandingsTableViewController.swift */; };
 		D66D742D1C9C5B2A00039097 /* BracketFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66D742C1C9C5B2A00039097 /* BracketFetcher.swift */; };
+		D66D742F1C9C625500039097 /* Tournament.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66D742E1C9C625500039097 /* Tournament.swift */; };
+		D6B224021C9C62CB00F03F84 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B224011C9C62CB00F03F84 /* Player.swift */; };
+		D6B224041C9C630D00F03F84 /* Bracket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B224031C9C630D00F03F84 /* Bracket.swift */; };
+		D6B224071C9C63F000F03F84 /* PlayerRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B224061C9C63F000F03F84 /* PlayerRound.swift */; };
+		D6B224091C9C63FC00F03F84 /* TournamentRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B224081C9C63FC00F03F84 /* TournamentRound.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		D66D741E1C9C58E100039097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D66D742A1C9C5A6F00039097 /* StandingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandingsTableViewController.swift; sourceTree = "<group>"; };
 		D66D742C1C9C5B2A00039097 /* BracketFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BracketFetcher.swift; sourceTree = "<group>"; };
+		D66D742E1C9C625500039097 /* Tournament.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tournament.swift; sourceTree = "<group>"; };
+		D6B224011C9C62CB00F03F84 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		D6B224031C9C630D00F03F84 /* Bracket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bracket.swift; sourceTree = "<group>"; };
+		D6B224061C9C63F000F03F84 /* PlayerRound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerRound.swift; sourceTree = "<group>"; };
+		D6B224081C9C63FC00F03F84 /* TournamentRound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentRound.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +111,8 @@
 			children = (
 				D66D73FC1C9C58E100039097 /* AppDelegate.swift */,
 				D66D742A1C9C5A6F00039097 /* StandingsTableViewController.swift */,
+				D6B2240A1C9C642600F03F84 /* Tournament Model */,
+				D6B224051C9C631B00F03F84 /* Player Model */,
 				D66D742C1C9C5B2A00039097 /* BracketFetcher.swift */,
 				D66D74001C9C58E100039097 /* Main.storyboard */,
 				D66D74031C9C58E100039097 /* Assets.xcassets */,
@@ -126,6 +138,25 @@
 				D66D741E1C9C58E100039097 /* Info.plist */,
 			);
 			path = "NYT Madness 2016UITests";
+			sourceTree = "<group>";
+		};
+		D6B224051C9C631B00F03F84 /* Player Model */ = {
+			isa = PBXGroup;
+			children = (
+				D6B224011C9C62CB00F03F84 /* Player.swift */,
+				D6B224031C9C630D00F03F84 /* Bracket.swift */,
+				D6B224061C9C63F000F03F84 /* PlayerRound.swift */,
+			);
+			name = "Player Model";
+			sourceTree = "<group>";
+		};
+		D6B2240A1C9C642600F03F84 /* Tournament Model */ = {
+			isa = PBXGroup;
+			children = (
+				D66D742E1C9C625500039097 /* Tournament.swift */,
+				D6B224081C9C63FC00F03F84 /* TournamentRound.swift */,
+			);
+			name = "Tournament Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +290,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6B224071C9C63F000F03F84 /* PlayerRound.swift in Sources */,
+				D66D742F1C9C625500039097 /* Tournament.swift in Sources */,
 				D66D73FD1C9C58E100039097 /* AppDelegate.swift in Sources */,
 				D66D742D1C9C5B2A00039097 /* BracketFetcher.swift in Sources */,
+				D6B224021C9C62CB00F03F84 /* Player.swift in Sources */,
+				D6B224091C9C63FC00F03F84 /* TournamentRound.swift in Sources */,
+				D6B224041C9C630D00F03F84 /* Bracket.swift in Sources */,
 				D66D742B1C9C5A6F00039097 /* StandingsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,6 +524,7 @@
 				D66D74231C9C58E100039097 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D66D74241C9C58E100039097 /* Build configuration list for PBXNativeTarget "NYT Madness 2016Tests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +533,7 @@
 				D66D74261C9C58E100039097 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D66D74271C9C58E100039097 /* Build configuration list for PBXNativeTarget "NYT Madness 2016UITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +542,7 @@
 				D66D74291C9C58E100039097 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
