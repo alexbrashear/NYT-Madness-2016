@@ -10,20 +10,20 @@ import Foundation
 
 let tournamentSourceURL = "http://10.51.221.205:8080/tournament.json"
 
-func fetchTeams(completion:() -> ()) {
+func fetchTournament(completion:(Tournament?) -> ()) {
     let URL = NSURL(string: teamsSourceURL)
     let request = NSURLRequest(URL: URL!)
     
     NSURLSession.sharedSession().dataTaskWithRequest(request) { (data:NSData?, response: NSURLResponse?, error: NSError?) -> Void in
-        // declare something
+        var tournament: Tournament?
         if let realData = data {
             do {
-                let tournamentDictionary = try NSJSONSerialization.JSONObjectWithData(realData, options: NSJSONReadingOptions.AllowFragments) as! Dictionary<String, AnyObject>
-                
+                let tournamentDictionary = try NSJSONSerialization.JSONObjectWithData(realData, options: NSJSONReadingOptions.AllowFragments) as! Dictionary<String, [[String:Int]]>
+                tournament = parseTournament(tournamentDictionary)
             }catch {
                 
             }
         }
-        completion()
+        completion(tournament)
     }.resume()
 }

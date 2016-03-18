@@ -11,7 +11,7 @@ import Foundation
 struct Game {
     let teamScore1: TeamScore
     let teamScore2: TeamScore
-    let round: TournamentRound
+    let roundValue: Int
     
     var winningTeam: Team {
         if teamScore1.score > teamScore2.score {
@@ -30,9 +30,9 @@ struct Game {
     var points: Int {
         let seedDifferential = winningTeam.seed - losingTeam.seed
         if seedDifferential > 0 {
-            return seedDifferential * round.value
+            return seedDifferential * roundValue
         }
-        return round.value
+        return roundValue
     }
 }
 

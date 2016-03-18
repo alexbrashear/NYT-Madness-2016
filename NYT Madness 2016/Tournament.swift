@@ -9,5 +9,5 @@
 import Foundation
 
 struct Tournament {
-    
+    let rounds: [TournamentRound]
 }

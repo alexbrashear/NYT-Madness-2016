@@ -10,5 +10,10 @@ import Foundation
 
 struct TournamentRound {
     var value: Int
-    var games = [Game]()
+    var games: [Game]
+    
+    init(value: Int, games: [Game]) {
+        self.games = games
+        self.value = value
+    }
 }
