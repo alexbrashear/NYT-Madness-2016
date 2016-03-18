@@ -20,7 +20,7 @@ struct Game {
         return teamScore2.team
     }
     
-    var losingTeam: Team {
+    private var losingTeam: Team {
         if teamScore1.score < teamScore2.score {
             return teamScore1.team
         }
