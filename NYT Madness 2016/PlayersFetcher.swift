@@ -18,8 +18,7 @@ func fetchPlayers(completion:([Player?]) -> ()) {
         var players = [Player?]()
         if let realData = data {
             do {
-                let tournament = Tournament()
-                let playerParser = PlayerParser(tournament:tournament)
+                let playerParser = PlayerParser()
                 let object = try NSJSONSerialization.JSONObjectWithData(realData, options: NSJSONReadingOptions.AllowFragments) as! Array<AnyObject>
                 for playerDictionary in object {
                     players.append(playerParser.parsePlayer(playerDictionary as! Dictionary<String, AnyObject>))                }

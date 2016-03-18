@@ -9,7 +9,6 @@
 import Foundation
 
 struct PlayerParser {
-    let tournament: Tournament
     
     func parsePlayer(dictionary:Dictionary<String, AnyObject>) -> Player? {
         var realName: String!
@@ -39,4 +38,29 @@ struct PlayerParser {
         
         return Picks(round1:round1, round2: round2, round3:round3, round4:round4, round5:round5, round6:round6)
     }
+}
+
+func calculatePoints(inout player:Player, tournament: Tournament) {
+    var total = 0
+    
+    let picks = player.picks
+    
+    let rounds = [picks.round1, picks.round2, picks.round3, picks.round4, picks.round5]
+    
+    for (index, round) in rounds.enumerate() {
+        for pick in round {
+            let round = tournament.rounds[index]
+            if let game: Game = round.games[pick] {
+                total = total + game.points
+            }
+        }
+    }
+    
+    let tournamentRound6: TournamentRound = tournament.rounds[5]
+    if let championshipGame = tournamentRound6.games[picks.round6] {
+        total = total + championshipGame.points
+    }
+    
+    
+    player.pointTotal = total
 }
