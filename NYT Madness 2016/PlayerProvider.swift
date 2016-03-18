@@ -8,27 +8,9 @@
 
 import Foundation
 
-protocol PlayerProviderDelegate {
-    func playerProviderDidUpdate() -> ()
-}
-
 struct PlayerProvider {
     var players = [Player]()
-    
-    var delegate: PlayerProviderDelegate?
-    
-    init() {
-        fetchPlayers { (fetchedPlayers:[Player?]) -> () in
-            for player in fetchedPlayers where player != nil {
-                self.players.append(player!)
-            }
-            
-            if let realDelegate = self.delegate {
-                realDelegate.playerProviderDidUpdate()
-            }
-        }
-    }
-    
+
     var playerCount: Int {
         return players.count
     }

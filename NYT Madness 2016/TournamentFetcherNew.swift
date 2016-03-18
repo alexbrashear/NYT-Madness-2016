@@ -10,7 +10,7 @@ import Foundation
 
 let tournamentSourceURL = "http://10.51.221.205:8080/tournament.json"
 
-func fetchTournament(completion:(Tournament?) -> ()) {
+func fetchTournament(tournamentParser:TournamentParser, completion:(Tournament?) -> ()) {
     let URL = NSURL(string: tournamentSourceURL)
     let request = NSURLRequest(URL: URL!)
     
@@ -19,7 +19,6 @@ func fetchTournament(completion:(Tournament?) -> ()) {
         if let realData = data {
             do {
                 let tournamentDictionary = try NSJSONSerialization.JSONObjectWithData(realData, options: NSJSONReadingOptions.AllowFragments) as! Dictionary<String, [[String:Int]]>
-                let tournamentParser = TournamentParser(teamProvider: TeamProvider())
                 tournament = tournamentParser.parseTournament(tournamentDictionary)
             } catch {
                 

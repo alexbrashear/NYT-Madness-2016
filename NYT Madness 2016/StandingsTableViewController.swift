@@ -8,15 +8,37 @@
 
 import UIKit
 
-class StandingsTableViewController: UITableViewController, TeamProviderDelegate, PlayerProviderDelegate {
-    var localPlayers = [Player]()
-    var teamProvider = TeamProvider()
+class StandingsTableViewController: UITableViewController {
     var playerProvider = PlayerProvider()
+    var teamProvider: TeamProvider?
+    var tournament: Tournament?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        teamProvider.delegate = self
-        playerProvider.delegate = self
+        
+        fetchTeams { (fetchedTeams:[Team]?) -> () in
+            var teamP = TeamProvider()
+            teamP.teams = fetchedTeams!
+            self.teamProvider = teamP
+            
+            let tournamentParser = TournamentParser(teamProvider: teamP)
+            fetchTournament(tournamentParser, completion: { (tournament:Tournament?) -> () in
+                
+                if let fetchedTournament = tournament {
+                    self.tournament = fetchedTournament
+                    
+                    fetchPlayers({ (fetchedPlayers:[Player?]) -> () in
+                        for player in fetchedPlayers where player != nil {
+                            var player1 = player!
+                            player1.pointTotal = calculatePoints(player!, tournament: self.tournament!)
+                            self.playerProvider.players.append(player1)
+                        }
+                        self.tableView.reloadData()
+                    })
+                }
+                
+            })
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -41,24 +63,18 @@ class StandingsTableViewController: UITableViewController, TeamProviderDelegate,
         // #warning Incomplete implementation, return the number of rows
         return playerProvider.playerCount
     }
-    
-    func teamProviderDidUpdate() {
-        
-    }
-    
-    func playerProviderDidUpdate() {
-        tableView.reloadData()
-    }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("rightDetail", forIndexPath: indexPath)
 
         // Configure the cell...
+        let player = playerProvider.player(indexPath.row)
+        
+        cell.textLabel!.text = player!.name
+        cell.detailTextLabel!.text = String(player!.pointTotal)
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.

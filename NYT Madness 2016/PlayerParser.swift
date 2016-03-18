@@ -40,7 +40,7 @@ struct PlayerParser {
     }
 }
 
-func calculatePoints(inout player:Player, tournament: Tournament) {
+func calculatePoints(player:Player, tournament: Tournament) -> Int {
     var total = 0
     
     let picks = player.picks
@@ -62,5 +62,5 @@ func calculatePoints(inout player:Player, tournament: Tournament) {
     }
     
     
-    player.pointTotal = total
+    return total
 }
