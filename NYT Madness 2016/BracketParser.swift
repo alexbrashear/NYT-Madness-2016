@@ -8,6 +8,6 @@
 
 import Foundation
 
-func parseBracket(array:Array<AnyObject>) -> Bracket {
+func parseBracket(dictionary: Dictionary) -> Bracket {
     
 }
