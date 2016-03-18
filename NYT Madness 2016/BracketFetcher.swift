@@ -15,12 +15,14 @@ func fetchPlayers(completion:([Player?]) -> ()) {
     let request = NSURLRequest(URL: URL!)
 
     NSURLSession.sharedSession().dataTaskWithRequest(request) { (data:NSData?, response: NSURLResponse?, error: NSError?) -> Void in
-        let brackets = [Player?]()
+        var brackets = [Player?]()
         if let realData = data {
             do {
                 let object = try NSJSONSerialization.JSONObjectWithData(realData, options: NSJSONReadingOptions.AllowFragments) as! Array<AnyObject>
+                let tournament = Tournament()
+                let playerParser = PlayerParser(tournament:tournament)
                 for playerDictionary in object {
-                    if let bracket = parsePlayer(playerDictionary) {
+                    if let bracket = playerParser.parsePlayer(playerDictionary as! Dictionary<String, AnyObject>) {
                         brackets.append(bracket)
                     }
                 }

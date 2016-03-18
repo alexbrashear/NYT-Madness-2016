@@ -1,5 +1,5 @@
 //
-//  TeamsFetcher.swift
+//  TournamentFetcherNew.swift
 //  NYT Madness 2016
 //
 //  Created by Brashear, Alex on 3/18/16.
@@ -8,23 +8,22 @@
 
 import Foundation
 
-let teamsSourceURL = "http://10.51.221.205:8080/teams.json"
+let tournamentSourceURL = "http://10.51.221.205:8080/tournament.json"
 
-func fetchTeams(completion:([Team]?) -> ()) {
+func fetchTeams(completion:() -> ()) {
     let URL = NSURL(string: teamsSourceURL)
     let request = NSURLRequest(URL: URL!)
     
     NSURLSession.sharedSession().dataTaskWithRequest(request) { (data:NSData?, response: NSURLResponse?, error: NSError?) -> Void in
-        var teams = [Team]()
+        // declare something
         if let realData = data {
             do {
-                let teamsDictionary = try NSJSONSerialization.JSONObjectWithData(realData, options: NSJSONReadingOptions.AllowFragments) as! Dictionary<String, Int>
-                let teamParser = TeamParser()
-                teams = teamParser.parseTeams(teamsDictionary)                
+                let tournamentDictionary = try NSJSONSerialization.JSONObjectWithData(realData, options: NSJSONReadingOptions.AllowFragments) as! Dictionary<String, AnyObject>
+                
             }catch {
                 
             }
         }
-        completion(teams)
+        completion()
     }.resume()
 }

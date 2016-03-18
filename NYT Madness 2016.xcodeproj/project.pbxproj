@@ -26,6 +26,7 @@
 		D6B224101C9C6D0500F03F84 /* TeamsFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B2240F1C9C6D0500F03F84 /* TeamsFetcher.swift */; };
 		D6B224121C9C6D4D00F03F84 /* TournamentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B224111C9C6D4D00F03F84 /* TournamentParser.swift */; };
 		D6B224141C9C77F000F03F84 /* TeamParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B224131C9C77F000F03F84 /* TeamParser.swift */; };
+		D6B224161C9C7EE900F03F84 /* TournamentFetcherNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B224151C9C7EE900F03F84 /* TournamentFetcherNew.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		D6B2240F1C9C6D0500F03F84 /* TeamsFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamsFetcher.swift; sourceTree = "<group>"; };
 		D6B224111C9C6D4D00F03F84 /* TournamentParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentParser.swift; sourceTree = "<group>"; };
 		D6B224131C9C77F000F03F84 /* TeamParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamParser.swift; sourceTree = "<group>"; };
+		D6B224151C9C7EE900F03F84 /* TournamentFetcherNew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentFetcherNew.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				D6B224051C9C631B00F03F84 /* Player Model */,
 				D66D742C1C9C5B2A00039097 /* BracketFetcher.swift */,
 				D6B2240F1C9C6D0500F03F84 /* TeamsFetcher.swift */,
+				D6B224151C9C7EE900F03F84 /* TournamentFetcherNew.swift */,
 				D66D74001C9C58E100039097 /* Main.storyboard */,
 				D66D74031C9C58E100039097 /* Assets.xcassets */,
 				D66D74051C9C58E100039097 /* LaunchScreen.storyboard */,
@@ -316,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6B224161C9C7EE900F03F84 /* TournamentFetcherNew.swift in Sources */,
 				414BE1741C9C655E0048C553 /* BracketParser.swift in Sources */,
 				D6B2240E1C9C658C00F03F84 /* Team.swift in Sources */,
 				D66D742F1C9C625500039097 /* Tournament.swift in Sources */,

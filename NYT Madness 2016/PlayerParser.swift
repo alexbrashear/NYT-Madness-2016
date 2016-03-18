@@ -11,9 +11,9 @@ import Foundation
 struct PlayerParser {
     let tournament: Tournament
     
-    func parsePlayer(dictionary:Dictionary<String, AnyObject>) -> Player {
+    func parsePlayer(dictionary:Dictionary<String, AnyObject>) -> Player? {
         var realName: String!
-        var picksDictionary: Dictionary <String, [String]>!
+        var picksDictionary: Dictionary <String, [String]> = ["":[""]]
         if let name = dictionary["name"] as? String {
             realName = name
         }
@@ -27,16 +27,16 @@ struct PlayerParser {
         return Player(name:realName, picks: pics, pointTotal: 0)
     }
     
-    func parsePicks(picksDictionary: Dictionary<String,[String]>) -> Picks {
+    func parsePicks(picksDictionary: Dictionary<String,AnyObject>) -> Picks {
         
-        let round1 = picksDictionary["first"]
-        let round2 = picksDictionary["second"]
-        let round3 = picksDictionary["sweet_sixteen"]
-        let round4 = picksDictionary["elite_eight"]
-        let round5 = picksDictionary["final_four"]
-        let round6 = picksDictionary["final"]
+        let round1 = picksDictionary["first"] as? [String] ?? [""]
+        let round2 = picksDictionary["second"] as? [String] ?? [""]
+        let round3 = picksDictionary["sweet_sixteen"] as? [String] ?? [""]
+        let round4 = picksDictionary["elite_eight"] as? [String] ?? [""]
+        let round5 = picksDictionary["final_four"] as? [String] ?? [""]
+        let round6 = picksDictionary["final"] as? String ?? ""
         
-        return Picks(round1:round1!, round2: round2!, round3:round3!, round4:round4!, round5:round5!, round6:round6!)
+        return Picks(round1:round1, round2: round2, round3:round3, round4:round4, round5:round5, round6:round6)
         
     }
     
