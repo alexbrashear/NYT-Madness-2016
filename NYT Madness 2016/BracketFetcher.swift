@@ -10,7 +10,7 @@ import Foundation
 
 let URLString = "http://10.51.221.205:8080/bracket.json"
 
-func fetchResults(completion:(Bracket?) -> ()) {
+func fetchBrackets(completion:(Bracket?) -> ()) {
     let URL = NSURL(string: URLString)
     let request = NSURLRequest(URL: URL!)
 
