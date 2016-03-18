@@ -12,7 +12,8 @@ struct TeamProvider {
     var teams = [Team]()
 
     func team(name:String) -> Team? {
-        for team in teams where team.name == name {
+        
+        for team in teams where team.name.lowercaseString == name.lowercaseString {
             return team
         }
         return nil

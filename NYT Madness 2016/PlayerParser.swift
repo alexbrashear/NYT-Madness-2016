@@ -49,6 +49,10 @@ func calculatePoints(player:Player, tournament: Tournament) -> Int {
     
     for (index, round) in rounds.enumerate() {
         for pick in round {
+            if index >= tournament.rounds.count {
+                continue
+            }
+            
             let round = tournament.rounds[index]
             if let game: Game = round.games[pick] {
                 total = total + game.points
@@ -56,9 +60,11 @@ func calculatePoints(player:Player, tournament: Tournament) -> Int {
         }
     }
     
-    let tournamentRound6: TournamentRound = tournament.rounds[5]
-    if let championshipGame = tournamentRound6.games[picks.round6] {
-        total = total + championshipGame.points
+    if tournament.rounds.count > 5 {
+        let tournamentRound6: TournamentRound = tournament.rounds[5]
+        if let championshipGame = tournamentRound6.games[picks.round6] {
+            total = total + championshipGame.points
+        }
     }
     
     

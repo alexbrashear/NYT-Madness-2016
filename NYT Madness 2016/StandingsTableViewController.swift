@@ -33,7 +33,9 @@ class StandingsTableViewController: UITableViewController {
                             player1.pointTotal = calculatePoints(player!, tournament: self.tournament!)
                             self.playerProvider.players.append(player1)
                         }
-                        self.tableView.reloadData()
+                        NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                            self.tableView.reloadData()
+                        })
                     })
                 }
                 
