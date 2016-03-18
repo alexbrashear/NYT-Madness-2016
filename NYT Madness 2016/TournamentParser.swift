@@ -27,7 +27,7 @@ struct TournamentParser {
                 }
                 games.append(Game(teamScore1: teamScores[0], teamScore2: teamScores[1], roundValue: valueForRound(round)))
             }
-            rounds.append(TournamentRound(value: valueForRound(round), games: games))
+            rounds.append(TournamentRound(value: valueForRound(round), games: winnerDictionary(games)))
         }
         
         return Tournament(rounds: rounds)
@@ -50,5 +50,18 @@ struct TournamentParser {
             default:
                 return 0
         }
+    }
+    
+    func winnerDictionary(games: [Game]) -> [String:Game] {
+        var dictionary = [String:Game]()
+        for game in games {
+            if game.teamScore1.score > game.teamScore2.score {
+                dictionary[game.teamScore1.team.name] = game
+            }
+            else {
+                dictionary[game.teamScore2.team.name] = game
+            }
+        }
+        return dictionary
     }
 }
