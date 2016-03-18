@@ -10,8 +10,8 @@ import Foundation
 
 let tournamentSourceURL = "http://10.51.221.205:8080/tournament.json"
 
-func fetchTournament(completion:(Tournament?) -> ()) {
-    let URL = NSURL(string: teamsSourceURL)
+func fetchTournament(completion:() -> ()) {
+    let URL = NSURL(string: tournamentSourceURL)
     let request = NSURLRequest(URL: URL!)
     
     NSURLSession.sharedSession().dataTaskWithRequest(request) { (data:NSData?, response: NSURLResponse?, error: NSError?) -> Void in

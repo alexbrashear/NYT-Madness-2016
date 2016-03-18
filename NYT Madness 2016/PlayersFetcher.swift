@@ -8,10 +8,10 @@
 
 import Foundation
 
-let URLString = "http://10.51.221.205:8080/bracket.json"
+let playersURLString = "http://10.51.221.205:8080/bracket.json"
 
 func fetchPlayers(completion:([Player?]) -> ()) {
-    let URL = NSURL(string: URLString)
+    let URL = NSURL(string: playersURLString)
     let request = NSURLRequest(URL: URL!)
     
     NSURLSession.sharedSession().dataTaskWithRequest(request) { (data:NSData?, response: NSURLResponse?, error: NSError?) -> Void in
