@@ -1,5 +1,5 @@
 //
-//  Bracket.swift
+//  Team.swift
 //  NYT Madness 2016
 //
 //  Created by Brashear, Alex on 3/18/16.
@@ -8,6 +8,7 @@
 
 import Foundation
 
-struct Bracket {
-    var picks = [String:[String]]()
+struct Team {
+    var name: String
+    var seed: Int
 }

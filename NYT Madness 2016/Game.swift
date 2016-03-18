@@ -1,5 +1,5 @@
 //
-//  PlayerRound.swift
+//  Game.swift
 //  NYT Madness 2016
 //
 //  Created by Brashear, Alex on 3/18/16.
@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+struct Game {
+    var team1: Team
+    var team2: Team
+}
