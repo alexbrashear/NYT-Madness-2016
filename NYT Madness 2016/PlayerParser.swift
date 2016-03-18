@@ -13,12 +13,13 @@ struct PlayerParser {
     
     func parsePlayer(dictionary:Dictionary<String, AnyObject>) -> Player? {
         var realName: String!
-        var picksDictionary: Dictionary <String, [String]> = ["":[""]]
+        
+        var picksDictionary: Dictionary <String, AnyObject> = ["":""]
         if let name = dictionary["name"] as? String {
             realName = name
         }
         
-        if let picks = dictionary["picks"] as? Dictionary <String, [String]> {
+        if let picks = dictionary["picks"] as? Dictionary <String, AnyObject> {
             picksDictionary = picks
         }
         
@@ -37,7 +38,5 @@ struct PlayerParser {
         let round6 = picksDictionary["final"] as? String ?? ""
         
         return Picks(round1:round1, round2: round2, round3:round3, round4:round4, round5:round5, round6:round6)
-        
     }
-    
 }
