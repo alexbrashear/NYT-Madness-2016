@@ -8,7 +8,7 @@
 
 import Foundation
 
-let tournamentSourceURL = "http://10.51.221.205:8080/tournament.json"
+let URLString = "http://10.51.221.205:8080/bracket.json"
 
 func fetchPlayers(completion:([Player?]) -> ()) {
     let URL = NSURL(string: URLString)
