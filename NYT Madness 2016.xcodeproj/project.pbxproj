@@ -25,6 +25,7 @@
 		D6B2240E1C9C658C00F03F84 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B2240D1C9C658C00F03F84 /* Team.swift */; };
 		D6B224101C9C6D0500F03F84 /* TournamentFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B2240F1C9C6D0500F03F84 /* TournamentFetcher.swift */; };
 		D6B224121C9C6D4D00F03F84 /* TournamentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B224111C9C6D4D00F03F84 /* TournamentParser.swift */; };
+		D6B224141C9C77F000F03F84 /* TeamParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B224131C9C77F000F03F84 /* TeamParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		D6B2240D1C9C658C00F03F84 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		D6B2240F1C9C6D0500F03F84 /* TournamentFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentFetcher.swift; sourceTree = "<group>"; };
 		D6B224111C9C6D4D00F03F84 /* TournamentParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentParser.swift; sourceTree = "<group>"; };
+		D6B224131C9C77F000F03F84 /* TeamParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				414BE1731C9C655E0048C553 /* BracketParser.swift */,
 				D6B224111C9C6D4D00F03F84 /* TournamentParser.swift */,
+				D6B224131C9C77F000F03F84 /* TeamParser.swift */,
 				414BE1751C9C6D200048C553 /* PlayerParser.swift */,
 			);
 			name = Parsers;
@@ -322,6 +325,7 @@
 				D6B224091C9C63FC00F03F84 /* TournamentRound.swift in Sources */,
 				D6B224121C9C6D4D00F03F84 /* TournamentParser.swift in Sources */,
 				D6B224101C9C6D0500F03F84 /* TournamentFetcher.swift in Sources */,
+				D6B224141C9C77F000F03F84 /* TeamParser.swift in Sources */,
 				D6B224041C9C630D00F03F84 /* Bracket.swift in Sources */,
 				D66D742B1C9C5A6F00039097 /* StandingsTableViewController.swift in Sources */,
 				414BE1761C9C6D200048C553 /* PlayerParser.swift in Sources */,
