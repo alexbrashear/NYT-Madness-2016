@@ -8,10 +8,15 @@
 
 import UIKit
 
-class StandingsTableViewController: UITableViewController {
+class StandingsTableViewController: UITableViewController, TeamProviderDelegate, PlayerProviderDelegate {
+    var localPlayers = [Player]()
+    var teamProvider = TeamProvider()
+    var playerProvider = PlayerProvider()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        teamProvider.delegate = self
+        playerProvider.delegate = self
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -29,12 +34,20 @@ class StandingsTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return playerProvider.playerCount
+    }
+    
+    func teamProviderDidUpdate() {
+        
+    }
+    
+    func playerProviderDidUpdate() {
+        tableView.reloadData()
     }
 
     /*

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		414BE1741C9C655E0048C553 /* BracketParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414BE1731C9C655E0048C553 /* BracketParser.swift */; };
 		414BE1761C9C6D200048C553 /* PlayerParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414BE1751C9C6D200048C553 /* PlayerParser.swift */; };
+		414BE1791C9C86B10048C553 /* TeamProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414BE1781C9C86B10048C553 /* TeamProvider.swift */; };
+		414BE17B1C9C8B490048C553 /* PlayerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414BE17A1C9C8B490048C553 /* PlayerProvider.swift */; };
+		414BE17C1C9C8C7E0048C553 /* PlayersFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B2240F1C9C6D0500F03F84 /* PlayersFetcher.swift */; };
 		D66D73FD1C9C58E100039097 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66D73FC1C9C58E100039097 /* AppDelegate.swift */; };
 		D66D74021C9C58E100039097 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D66D74001C9C58E100039097 /* Main.storyboard */; };
 		D66D74041C9C58E100039097 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D66D74031C9C58E100039097 /* Assets.xcassets */; };
@@ -22,7 +25,6 @@
 		D6B224091C9C63FC00F03F84 /* TournamentRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B224081C9C63FC00F03F84 /* TournamentRound.swift */; };
 		D6B2240C1C9C653000F03F84 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B2240B1C9C653000F03F84 /* Game.swift */; };
 		D6B2240E1C9C658C00F03F84 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B2240D1C9C658C00F03F84 /* Team.swift */; };
-		D6B224101C9C6D0500F03F84 /* PlayersFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B2240F1C9C6D0500F03F84 /* PlayersFetcher.swift */; };
 		D6B224121C9C6D4D00F03F84 /* TournamentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B224111C9C6D4D00F03F84 /* TournamentParser.swift */; };
 		D6B224141C9C77F000F03F84 /* TeamParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B224131C9C77F000F03F84 /* TeamParser.swift */; };
 		D6B224161C9C7EE900F03F84 /* TournamentFetcherNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B224151C9C7EE900F03F84 /* TournamentFetcherNew.swift */; };
@@ -49,6 +51,8 @@
 /* Begin PBXFileReference section */
 		414BE1731C9C655E0048C553 /* BracketParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BracketParser.swift; sourceTree = "<group>"; };
 		414BE1751C9C6D200048C553 /* PlayerParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerParser.swift; sourceTree = "<group>"; };
+		414BE1781C9C86B10048C553 /* TeamProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamProvider.swift; sourceTree = "<group>"; };
+		414BE17A1C9C8B490048C553 /* PlayerProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerProvider.swift; sourceTree = "<group>"; };
 		D66D73F91C9C58E100039097 /* NYT Madness 2016.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NYT Madness 2016.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D66D73FC1C9C58E100039097 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D66D74011C9C58E100039097 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -111,6 +115,15 @@
 			name = Parsers;
 			sourceTree = "<group>";
 		};
+		414BE1771C9C86A20048C553 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				414BE1781C9C86B10048C553 /* TeamProvider.swift */,
+				414BE17A1C9C8B490048C553 /* PlayerProvider.swift */,
+			);
+			name = Providers;
+			sourceTree = "<group>";
+		};
 		D66D73F01C9C58E000039097 = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +147,7 @@
 		D66D73FB1C9C58E100039097 /* NYT Madness 2016 */ = {
 			isa = PBXGroup;
 			children = (
+				414BE1771C9C86A20048C553 /* Providers */,
 				414BE1721C9C654E0048C553 /* Parsers */,
 				D66D73FC1C9C58E100039097 /* AppDelegate.swift */,
 				D66D742A1C9C5A6F00039097 /* StandingsTableViewController.swift */,
@@ -326,13 +340,14 @@
 				D66D73FD1C9C58E100039097 /* AppDelegate.swift in Sources */,
 				D6B2241A1C9C861000F03F84 /* TeamsFetcherNew.swift in Sources */,
 				D6B224021C9C62CB00F03F84 /* Player.swift in Sources */,
+				414BE17B1C9C8B490048C553 /* PlayerProvider.swift in Sources */,
 				D6B224091C9C63FC00F03F84 /* TournamentRound.swift in Sources */,
 				D6B224121C9C6D4D00F03F84 /* TournamentParser.swift in Sources */,
-				D6B224101C9C6D0500F03F84 /* PlayersFetcher.swift in Sources */,
 				D6B224141C9C77F000F03F84 /* TeamParser.swift in Sources */,
-				D6B224101C9C6D0500F03F84 /* PlayersFetcher.swift in Sources */,
 				D6B224041C9C630D00F03F84 /* Bracket.swift in Sources */,
+				414BE17C1C9C8C7E0048C553 /* PlayersFetcher.swift in Sources */,
 				D66D742B1C9C5A6F00039097 /* StandingsTableViewController.swift in Sources */,
+				414BE1791C9C86B10048C553 /* TeamProvider.swift in Sources */,
 				414BE1761C9C6D200048C553 /* PlayerParser.swift in Sources */,
 				D6B2240C1C9C653000F03F84 /* Game.swift in Sources */,
 			);
