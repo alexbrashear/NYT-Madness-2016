@@ -18,6 +18,10 @@ class StandingsTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        fetchPlayers { (players:[Player?]) -> () in
+            print(players)
+        }
     }
 
     override func didReceiveMemoryWarning() {
