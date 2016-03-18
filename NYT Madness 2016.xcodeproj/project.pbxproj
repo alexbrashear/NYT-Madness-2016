@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D66D73FD1C9C58E100039097 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66D73FC1C9C58E100039097 /* AppDelegate.swift */; };
+		D66D73FF1C9C58E100039097 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66D73FE1C9C58E100039097 /* ViewController.swift */; };
+		D66D74021C9C58E100039097 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D66D74001C9C58E100039097 /* Main.storyboard */; };
+		D66D74041C9C58E100039097 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D66D74031C9C58E100039097 /* Assets.xcassets */; };
+		D66D74071C9C58E100039097 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D66D74051C9C58E100039097 /* LaunchScreen.storyboard */; };
+		D66D74121C9C58E100039097 /* NYT_Madness_2016Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66D74111C9C58E100039097 /* NYT_Madness_2016Tests.swift */; };
+		D66D741D1C9C58E100039097 /* NYT_Madness_2016UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66D741C1C9C58E100039097 /* NYT_Madness_2016UITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D66D740E1C9C58E100039097 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D66D73F11C9C58E000039097 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D66D73F81C9C58E100039097;
+			remoteInfo = "NYT Madness 2016";
+		};
+		D66D74191C9C58E100039097 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D66D73F11C9C58E000039097 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D66D73F81C9C58E100039097;
+			remoteInfo = "NYT Madness 2016";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D66D73F91C9C58E100039097 /* NYT Madness 2016.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NYT Madness 2016.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D66D73FC1C9C58E100039097 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D66D73FE1C9C58E100039097 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D66D74011C9C58E100039097 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D66D74031C9C58E100039097 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D66D74061C9C58E100039097 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D66D74081C9C58E100039097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D66D740D1C9C58E100039097 /* NYT Madness 2016Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NYT Madness 2016Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D66D74111C9C58E100039097 /* NYT_Madness_2016Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYT_Madness_2016Tests.swift; sourceTree = "<group>"; };
+		D66D74131C9C58E100039097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D66D74181C9C58E100039097 /* NYT Madness 2016UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NYT Madness 2016UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D66D741C1C9C58E100039097 /* NYT_Madness_2016UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYT_Madness_2016UITests.swift; sourceTree = "<group>"; };
+		D66D741E1C9C58E100039097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D66D73F61C9C58E100039097 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D66D740A1C9C58E100039097 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D66D74151C9C58E100039097 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D66D73F01C9C58E000039097 = {
+			isa = PBXGroup;
+			children = (
+				D66D73FB1C9C58E100039097 /* NYT Madness 2016 */,
+				D66D74101C9C58E100039097 /* NYT Madness 2016Tests */,
+				D66D741B1C9C58E100039097 /* NYT Madness 2016UITests */,
+				D66D73FA1C9C58E100039097 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D66D73FA1C9C58E100039097 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D66D73F91C9C58E100039097 /* NYT Madness 2016.app */,
+				D66D740D1C9C58E100039097 /* NYT Madness 2016Tests.xctest */,
+				D66D74181C9C58E100039097 /* NYT Madness 2016UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D66D73FB1C9C58E100039097 /* NYT Madness 2016 */ = {
+			isa = PBXGroup;
+			children = (
+				D66D73FC1C9C58E100039097 /* AppDelegate.swift */,
+				D66D73FE1C9C58E100039097 /* ViewController.swift */,
+				D66D74001C9C58E100039097 /* Main.storyboard */,
+				D66D74031C9C58E100039097 /* Assets.xcassets */,
+				D66D74051C9C58E100039097 /* LaunchScreen.storyboard */,
+				D66D74081C9C58E100039097 /* Info.plist */,
+			);
+			path = "NYT Madness 2016";
+			sourceTree = "<group>";
+		};
+		D66D74101C9C58E100039097 /* NYT Madness 2016Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D66D74111C9C58E100039097 /* NYT_Madness_2016Tests.swift */,
+				D66D74131C9C58E100039097 /* Info.plist */,
+			);
+			path = "NYT Madness 2016Tests";
+			sourceTree = "<group>";
+		};
+		D66D741B1C9C58E100039097 /* NYT Madness 2016UITests */ = {
+			isa = PBXGroup;
+			children = (
+				D66D741C1C9C58E100039097 /* NYT_Madness_2016UITests.swift */,
+				D66D741E1C9C58E100039097 /* Info.plist */,
+			);
+			path = "NYT Madness 2016UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D66D73F81C9C58E100039097 /* NYT Madness 2016 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D66D74211C9C58E100039097 /* Build configuration list for PBXNativeTarget "NYT Madness 2016" */;
+			buildPhases = (
+				D66D73F51C9C58E100039097 /* Sources */,
+				D66D73F61C9C58E100039097 /* Frameworks */,
+				D66D73F71C9C58E100039097 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NYT Madness 2016";
+			productName = "NYT Madness 2016";
+			productReference = D66D73F91C9C58E100039097 /* NYT Madness 2016.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D66D740C1C9C58E100039097 /* NYT Madness 2016Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D66D74241C9C58E100039097 /* Build configuration list for PBXNativeTarget "NYT Madness 2016Tests" */;
+			buildPhases = (
+				D66D74091C9C58E100039097 /* Sources */,
+				D66D740A1C9C58E100039097 /* Frameworks */,
+				D66D740B1C9C58E100039097 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D66D740F1C9C58E100039097 /* PBXTargetDependency */,
+			);
+			name = "NYT Madness 2016Tests";
+			productName = "NYT Madness 2016Tests";
+			productReference = D66D740D1C9C58E100039097 /* NYT Madness 2016Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D66D74171C9C58E100039097 /* NYT Madness 2016UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D66D74271C9C58E100039097 /* Build configuration list for PBXNativeTarget "NYT Madness 2016UITests" */;
+			buildPhases = (
+				D66D74141C9C58E100039097 /* Sources */,
+				D66D74151C9C58E100039097 /* Frameworks */,
+				D66D74161C9C58E100039097 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D66D741A1C9C58E100039097 /* PBXTargetDependency */,
+			);
+			name = "NYT Madness 2016UITests";
+			productName = "NYT Madness 2016UITests";
+			productReference = D66D74181C9C58E100039097 /* NYT Madness 2016UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D66D73F11C9C58E000039097 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = NYTimes;
+				TargetAttributes = {
+					D66D73F81C9C58E100039097 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					D66D740C1C9C58E100039097 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = D66D73F81C9C58E100039097;
+					};
+					D66D74171C9C58E100039097 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = D66D73F81C9C58E100039097;
+					};
+				};
+			};
+			buildConfigurationList = D66D73F41C9C58E000039097 /* Build configuration list for PBXProject "NYT Madness 2016" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D66D73F01C9C58E000039097;
+			productRefGroup = D66D73FA1C9C58E100039097 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D66D73F81C9C58E100039097 /* NYT Madness 2016 */,
+				D66D740C1C9C58E100039097 /* NYT Madness 2016Tests */,
+				D66D74171C9C58E100039097 /* NYT Madness 2016UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D66D73F71C9C58E100039097 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D66D74071C9C58E100039097 /* LaunchScreen.storyboard in Resources */,
+				D66D74041C9C58E100039097 /* Assets.xcassets in Resources */,
+				D66D74021C9C58E100039097 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D66D740B1C9C58E100039097 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D66D74161C9C58E100039097 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D66D73F51C9C58E100039097 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D66D73FF1C9C58E100039097 /* ViewController.swift in Sources */,
+				D66D73FD1C9C58E100039097 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D66D74091C9C58E100039097 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D66D74121C9C58E100039097 /* NYT_Madness_2016Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D66D74141C9C58E100039097 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D66D741D1C9C58E100039097 /* NYT_Madness_2016UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D66D740F1C9C58E100039097 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D66D73F81C9C58E100039097 /* NYT Madness 2016 */;
+			targetProxy = D66D740E1C9C58E100039097 /* PBXContainerItemProxy */;
+		};
+		D66D741A1C9C58E100039097 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D66D73F81C9C58E100039097 /* NYT Madness 2016 */;
+			targetProxy = D66D74191C9C58E100039097 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D66D74001C9C58E100039097 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D66D74011C9C58E100039097 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D66D74051C9C58E100039097 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D66D74061C9C58E100039097 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D66D741F1C9C58E100039097 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D66D74201C9C58E100039097 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D66D74221C9C58E100039097 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "NYT Madness 2016/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.NYTimes.NYT-Madness-2016";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D66D74231C9C58E100039097 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "NYT Madness 2016/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.NYTimes.NYT-Madness-2016";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D66D74251C9C58E100039097 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "NYT Madness 2016Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.NYTimes.NYT-Madness-2016Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NYT Madness 2016.app/NYT Madness 2016";
+			};
+			name = Debug;
+		};
+		D66D74261C9C58E100039097 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "NYT Madness 2016Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.NYTimes.NYT-Madness-2016Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NYT Madness 2016.app/NYT Madness 2016";
+			};
+			name = Release;
+		};
+		D66D74281C9C58E100039097 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "NYT Madness 2016UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.NYTimes.NYT-Madness-2016UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "NYT Madness 2016";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		D66D74291C9C58E100039097 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "NYT Madness 2016UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.NYTimes.NYT-Madness-2016UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "NYT Madness 2016";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D66D73F41C9C58E000039097 /* Build configuration list for PBXProject "NYT Madness 2016" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D66D741F1C9C58E100039097 /* Debug */,
+				D66D74201C9C58E100039097 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D66D74211C9C58E100039097 /* Build configuration list for PBXNativeTarget "NYT Madness 2016" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D66D74221C9C58E100039097 /* Debug */,
+				D66D74231C9C58E100039097 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D66D74241C9C58E100039097 /* Build configuration list for PBXNativeTarget "NYT Madness 2016Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D66D74251C9C58E100039097 /* Debug */,
+				D66D74261C9C58E100039097 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D66D74271C9C58E100039097 /* Build configuration list for PBXNativeTarget "NYT Madness 2016UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D66D74281C9C58E100039097 /* Debug */,
+				D66D74291C9C58E100039097 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D66D73F11C9C58E000039097 /* Project object */;
+}
