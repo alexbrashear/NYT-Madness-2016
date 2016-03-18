@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		414BE1741C9C655E0048C553 /* BracketParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414BE1731C9C655E0048C553 /* BracketParser.swift */; };
+		414BE1761C9C6D200048C553 /* PlayerParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414BE1751C9C6D200048C553 /* PlayerParser.swift */; };
 		D66D73FD1C9C58E100039097 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66D73FC1C9C58E100039097 /* AppDelegate.swift */; };
 		D66D74021C9C58E100039097 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D66D74001C9C58E100039097 /* Main.storyboard */; };
 		D66D74041C9C58E100039097 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D66D74031C9C58E100039097 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		414BE1731C9C655E0048C553 /* BracketParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BracketParser.swift; sourceTree = "<group>"; };
+		414BE1751C9C6D200048C553 /* PlayerParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerParser.swift; sourceTree = "<group>"; };
 		D66D73F91C9C58E100039097 /* NYT Madness 2016.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NYT Madness 2016.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D66D73FC1C9C58E100039097 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D66D74011C9C58E100039097 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				414BE1731C9C655E0048C553 /* BracketParser.swift */,
+				414BE1751C9C6D200048C553 /* PlayerParser.swift */,
 			);
 			name = Parsers;
 			sourceTree = "<group>";
@@ -304,7 +307,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6B224071C9C63F000F03F84 /* PlayerRound.swift in Sources */,
 				414BE1741C9C655E0048C553 /* BracketParser.swift in Sources */,
 				D6B2240E1C9C658C00F03F84 /* Team.swift in Sources */,
 				D66D742F1C9C625500039097 /* Tournament.swift in Sources */,
@@ -314,6 +316,7 @@
 				D6B224091C9C63FC00F03F84 /* TournamentRound.swift in Sources */,
 				D6B224041C9C630D00F03F84 /* Bracket.swift in Sources */,
 				D66D742B1C9C5A6F00039097 /* StandingsTableViewController.swift in Sources */,
+				414BE1761C9C6D200048C553 /* PlayerParser.swift in Sources */,
 				D6B2240C1C9C653000F03F84 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
