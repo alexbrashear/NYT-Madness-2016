@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+struct TournamentRound {
+    var value: Int
+    var games = [Game]()
+}
