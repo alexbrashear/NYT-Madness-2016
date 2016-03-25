@@ -13,12 +13,13 @@ class StandingsTableViewController: UITableViewController {
     var teamProvider: TeamProvider?
     var tournament: Tournament?
 
+    @IBOutlet weak var refreshBarButtonItem: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Standings"
         
-        self.refreshData()
+        self.refreshData(nil)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -56,7 +57,7 @@ class StandingsTableViewController: UITableViewController {
         return cell
     }
     
-    func refreshData() {
+    func refreshData(completion: (() -> ())?) {
         fetchTeams { (fetchedTeams:[Team]?) -> () in
             var teamP = TeamProvider()
             teamP.teams = fetchedTeams!
@@ -69,19 +70,35 @@ class StandingsTableViewController: UITableViewController {
                     self.tournament = fetchedTournament
                     
                     fetchPlayers({ (fetchedPlayers:[Player?]) -> () in
+                        var players = [Player]()
                         for player in fetchedPlayers where player != nil {
                             var player1 = player!
                             player1.pointTotal = calculatePoints(player!, tournament: self.tournament!)
-                            self.playerProvider.players.append(player1)
+                            players.append(player1)
                         }
-                        self.playerProvider.players.sortInPlace({$0.pointTotal > $1.pointTotal})
+                        players.sortInPlace({$0.pointTotal > $1.pointTotal})
+                        if players.count > 0 {
+                            self.playerProvider.players = players
+                        }
                         NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
                             self.tableView.reloadData()
                         })
+                        if completion != nil {
+                            completion!()
+                        }
                     })
                 }
                 
             })
+        }
+    }
+    
+    // MARK: - IBActions
+    
+    @IBAction func refreshButtonTapped(sender: UIBarButtonItem) {
+        self.refreshBarButtonItem.enabled = false
+        self.refreshData { () -> () in
+            self.refreshBarButtonItem.enabled = true
         }
     }
 
