@@ -16,6 +16,8 @@ class StandingsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Standings"
+        
         fetchTeams { (fetchedTeams:[Team]?) -> () in
             var teamP = TeamProvider()
             teamP.teams = fetchedTeams!
