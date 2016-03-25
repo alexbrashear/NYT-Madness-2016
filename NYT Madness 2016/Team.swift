@@ -11,4 +11,9 @@ import Foundation
 struct Team {
     var name: String
     var seed: Int
+    
+    init(name: String, seed: Int) {
+        self.name = name.lowercaseString
+        self.seed = seed
+    }
 }

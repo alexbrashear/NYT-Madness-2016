@@ -29,14 +29,14 @@ struct PlayerParser {
     
     func parsePicks(picksDictionary: Dictionary<String,AnyObject>) -> Picks {
         
-        let round1 = picksDictionary["first"] as? [String] ?? [""]
-        let round2 = picksDictionary["second"] as? [String] ?? [""]
-        let round3 = picksDictionary["sweet_sixteen"] as? [String] ?? [""]
-        let round4 = picksDictionary["elite_eight"] as? [String] ?? [""]
-        let round5 = picksDictionary["final_four"] as? [String] ?? [""]
-        let round6 = picksDictionary["final"] as? String ?? ""
+        let round1 = (picksDictionary["first"] as? [String] ?? [""]).map { $0.lowercaseString }
+        let round2 = (picksDictionary["second"] as? [String] ?? [""]).map { $0.lowercaseString }
+        let round3 = (picksDictionary["sweet_sixteen"] as? [String] ?? [""]).map { $0.lowercaseString }
+        let round4 = (picksDictionary["elite_eight"] as? [String] ?? [""]).map { $0.lowercaseString }
+        let round5 = (picksDictionary["final_four"] as? [String] ?? [""]).map { $0.lowercaseString }
+        let round6 = (picksDictionary["final"] as? String ?? "").map { $0.lowercaseString }
         
-        return Picks(round1:round1, round2: round2, round3:round3, round4:round4, round5:round5, round6:round6)
+        return Picks(round1:round1, round2: round2, round3:round3, round4:round4, round5:round5, round6:round6!)
     }
 }
 
