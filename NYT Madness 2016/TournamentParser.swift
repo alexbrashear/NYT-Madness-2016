@@ -17,39 +17,42 @@ struct TournamentParser {
     }
     
     func parseTournament(tournamentDictionary: [String:[[String:Int]]]) -> Tournament {
-        var rounds = [TournamentRound]()
+        var rounds = [TournamentRound](count: 6, repeatedValue: TournamentRound(value: -1, games: [:]))
+        rounds.reserveCapacity(6)
         for (round, resultsArray) in tournamentDictionary {
             var games = [Game]()
+            let (roundValue, roundPosition) = valueAndPositionForRound(round)
             for gameDictionary in resultsArray {
                 var teamScores = [TeamScore]()
                 for (teamName, score) in gameDictionary {
                     teamScores.append(TeamScore(team: teamProvider.team(teamName)!, score: score))
                 }
-                let game = Game(teamScore1: teamScores[0], teamScore2: teamScores[1], roundValue: valueForRound(round))
+                let game = Game(teamScore1: teamScores[0], teamScore2: teamScores[1], roundValue: roundValue)
                 games.append(game)
             }
-            rounds.append(TournamentRound(value: valueForRound(round), games: winnerDictionary(games)))
+            rounds[roundPosition] = TournamentRound(value: roundValue, games: winnerDictionary(games))
         }
         
         return Tournament(rounds: rounds)
     }
 
-    func valueForRound(round: String) -> Int {
+    func valueAndPositionForRound(round: String) -> (Int, Int) {
         switch (round) {
             case "Round_1":
-                return 1
+                return (1, 0)
             case "Round_2":
-                return 1
+                return (1, 1)
             case "Round_3":
-                return 2
+                return (2, 2)
             case "Round_4":
-                return 4
+                return (4, 3)
             case "Round_5":
-                return 8
+                return (8, 4)
             case "Round_6":
-                return 16
+                return (16, 5)
             default:
-                return 0
+                print("ERROR: No valid round found for string: \(round)")
+                return (-1, -1)
         }
     }
     

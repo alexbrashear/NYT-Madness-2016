@@ -43,26 +43,29 @@ struct PlayerParser {
 func calculatePoints(player:Player, tournament: Tournament) -> Int {
     var total = 0
     
-    let picks = player.picks
+    let picks = [player.picks.round1, player.picks.round2, player.picks.round3, player.picks.round4, player.picks.round5]
     
-    let rounds = [picks.round1, picks.round2, picks.round3, picks.round4, picks.round5]
+    print("current player: \(player.name)")
     
-    for (index, round) in rounds.enumerate() {
-        for pick in round {
-            if index >= tournament.rounds.count {
+    for (currentRound, picksByRound) in picks.enumerate() {
+        print("Round Total: \(total)")
+        let roundResults = tournament.rounds[currentRound]
+        for pick in picksByRound {
+            if currentRound >= tournament.rounds.count {
                 continue
             }
             
-            let round = tournament.rounds[index]
-            if let game: Game = round.games[pick] {
-                total = total + game.points
+            if let correctPick: Game = roundResults.games[pick] {
+                total = total + correctPick.points
+            } else {
+                print("INCORRECT - pick: \(pick), round: \(currentRound)")
             }
         }
     }
     
     if tournament.rounds.count > 5 {
         let tournamentRound6: TournamentRound = tournament.rounds[5]
-        if let championshipGame = tournamentRound6.games[picks.round6] {
+        if let championshipGame = tournamentRound6.games[player.picks.round6] {
             total = total + championshipGame.points
         }
     }
