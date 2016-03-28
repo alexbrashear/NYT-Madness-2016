@@ -34,16 +34,21 @@ struct PlayerParser {
         let round3 = (picksDictionary["Round_3"] as? [String] ?? [""]).map { $0.lowercaseString }
         let round4 = (picksDictionary["Round_4"] as? [String] ?? [""]).map { $0.lowercaseString }
         let round5 = (picksDictionary["Round_5"] as? [String] ?? [""]).map { $0.lowercaseString }
-        let round6 = (picksDictionary["Round_6"] as? String ?? "").map { $0.lowercaseString }
+        let round6 = (picksDictionary["Round_6"] as? [String] ?? [""]).map { $0.lowercaseString }
         
-        return Picks(round1:round1, round2: round2, round3:round3, round4:round4, round5:round5, round6:round6!)
+        return Picks(round1:round1, round2: round2, round3:round3, round4:round4, round5:round5, round6:round6)
     }
 }
 
 func calculatePoints(player:Player, tournament: Tournament) -> Int {
     var total = 0
     
-    let picks = [player.picks.round1, player.picks.round2, player.picks.round3, player.picks.round4, player.picks.round5]
+    let picks = [player.picks.round1,
+                 player.picks.round2,
+                 player.picks.round3,
+                 player.picks.round4,
+                 player.picks.round5,
+                 player.picks.round6]
     
     print("current player: \(player.name)")
     
@@ -62,14 +67,6 @@ func calculatePoints(player:Player, tournament: Tournament) -> Int {
             }
         }
     }
-    
-    if tournament.rounds.count > 5 {
-        let tournamentRound6: TournamentRound = tournament.rounds[5]
-        if let championshipGame = tournamentRound6.games[player.picks.round6] {
-            total = total + championshipGame.points
-        }
-    }
-    
     
     return total
 }

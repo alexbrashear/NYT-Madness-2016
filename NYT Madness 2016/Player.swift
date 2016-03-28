@@ -21,5 +21,5 @@ struct Picks {
     let round3: [String]
     let round4: [String]
     let round5: [String]
-    let round6: String
+    let round6: [String]
 }
