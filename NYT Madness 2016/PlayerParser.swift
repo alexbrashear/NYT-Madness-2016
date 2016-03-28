@@ -29,12 +29,12 @@ struct PlayerParser {
     
     func parsePicks(picksDictionary: Dictionary<String,AnyObject>) -> Picks {
         
-        let round1 = (picksDictionary["first"] as? [String] ?? [""]).map { $0.lowercaseString }
-        let round2 = (picksDictionary["second"] as? [String] ?? [""]).map { $0.lowercaseString }
-        let round3 = (picksDictionary["sweet_sixteen"] as? [String] ?? [""]).map { $0.lowercaseString }
-        let round4 = (picksDictionary["elite_eight"] as? [String] ?? [""]).map { $0.lowercaseString }
-        let round5 = (picksDictionary["final_four"] as? [String] ?? [""]).map { $0.lowercaseString }
-        let round6 = (picksDictionary["final"] as? String ?? "").map { $0.lowercaseString }
+        let round1 = (picksDictionary["Round_1"] as? [String] ?? [""]).map { $0.lowercaseString }
+        let round2 = (picksDictionary["Round_2"] as? [String] ?? [""]).map { $0.lowercaseString }
+        let round3 = (picksDictionary["Round_3"] as? [String] ?? [""]).map { $0.lowercaseString }
+        let round4 = (picksDictionary["Round_4"] as? [String] ?? [""]).map { $0.lowercaseString }
+        let round5 = (picksDictionary["Round_5"] as? [String] ?? [""]).map { $0.lowercaseString }
+        let round6 = (picksDictionary["Round_6"] as? String ?? "").map { $0.lowercaseString }
         
         return Picks(round1:round1, round2: round2, round3:round3, round4:round4, round5:round5, round6:round6!)
     }

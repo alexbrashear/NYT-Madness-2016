@@ -25,7 +25,8 @@ struct TournamentParser {
                 for (teamName, score) in gameDictionary {
                     teamScores.append(TeamScore(team: teamProvider.team(teamName)!, score: score))
                 }
-                games.append(Game(teamScore1: teamScores[0], teamScore2: teamScores[1], roundValue: valueForRound(round)))
+                let game = Game(teamScore1: teamScores[0], teamScore2: teamScores[1], roundValue: valueForRound(round))
+                games.append(game)
             }
             rounds.append(TournamentRound(value: valueForRound(round), games: winnerDictionary(games)))
         }
@@ -34,18 +35,18 @@ struct TournamentParser {
     }
 
     func valueForRound(round: String) -> Int {
-        switch (round.lowercaseString) {
-            case "round 1":
+        switch (round) {
+            case "Round_1":
                 return 1
-            case "round 2":
+            case "Round_2":
                 return 1
-            case "round 3":
+            case "Round_3":
                 return 2
-            case "round 4":
+            case "Round_4":
                 return 4
-            case "round 5":
+            case "Round_5":
                 return 8
-            case "round 6":
+            case "Round_6":
                 return 16
             default:
                 return 0
