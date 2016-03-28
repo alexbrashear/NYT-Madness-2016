@@ -1,0 +1,248 @@
+{
+  "Round_1": [{
+      "kansas": 105,
+      "Austin Peay": 79
+    },
+    {
+      "Colorado": 67,
+      "Uconn": 74
+    },
+    {
+      "maryland": 73,
+      "south dakota": 60
+    },
+    {
+      "cal": 66,
+      "hawaii": 77
+    },
+    {
+      "Arizona": 55,
+      "Wichita St": 65
+    },
+    {
+      "Miami": 79,
+      "buffalo": 72
+    },
+    {
+      "iowa": 72,
+      "temple": 70
+    },
+    {
+      "villanova": 86,
+      "UNC asheville": 56
+    },
+    {
+      "oregon": 73,
+      "holy cross": 60
+    },
+    {
+      "saint joe's": 73,
+      "cincinnati": 60
+    },
+    {
+      "baylor": 75,
+      "yale": 79
+    },
+    {
+      "Duke": 93,
+      "UNC Wilmington": 85
+    },
+    {
+      "texas": 7,
+      "northern iowa": 60
+    },
+    {
+      "texas a&m": 73,
+      "green bay": 60
+    },
+    {
+      "oregon st": 7,
+      "VCU": 60
+    },
+    {
+      "oklahoma": 73,
+      "csu baker": 60
+    },
+    {
+      "UNC": 83,
+      "FGCU": 67
+    },
+    {
+      "Providence": 70,
+      "USC": 69
+    },
+    {
+      "Indiana": 99,
+      "chattanooga": 74
+    },
+    {
+      "Kentucky": 85,
+      "stony brook": 57
+    },
+    {
+      "notre dame": 73,
+      "michigan": 60
+    },
+    {
+      "west virginia": 7,
+      "sf austin": 60
+    },
+    {
+      "wisconsin": 73,
+      "pitt": 60
+    },
+    {
+      "xavier": 73,
+      "weber st": 60
+    },
+    {
+      "UVA": 81,
+      "Hampton": 45
+    },
+    {
+      "Texas Tech": 61,
+      "Butler": 71
+    },
+    {
+      "Purdue": 83,
+      "AR little rock": 85
+    },
+    {
+      "iowa st": 94,
+      "iona": 81
+    },
+    {
+      "gonzaga": 68,
+      "seton hall": 52
+    },
+    {
+      "utah": 80,
+      "fresno st": 69
+    },
+    {
+      "dayton": 7,
+      "syracuse": 60
+    },
+    {
+      "michigan st": 7,
+      "mid tennessee": 60
+    }
+  ],
+  "Round_2": [{
+      "kansas": 105,
+      "uconn": 79
+    },
+    {
+      "maryland": 73,
+      "hawaii": 60
+    },
+    {
+      "miami": 155,
+      "Wichita St": 65
+    },
+    {
+      "iowa": 72,
+      "villanova": 80
+    },
+    {
+      "oregon": 73,
+      "saint joe's": 60
+    },
+    {
+      "duke": 75,
+      "yale": 7
+    },
+    {
+      "texas a&m": 70,
+      "northern iowa": 60
+    },
+    {
+      "oklahoma": 70,
+      "VCU": 60
+    },
+    {
+      "UNC": 83,
+      "providence": 67
+    },
+    {
+      "Indiana": 99,
+      "kentucky": 74
+    },
+    {
+      "notre dame": 73,
+      "sf austin": 60
+    },
+    {
+      "wisconsin": 73,
+      "xavier": 60
+    },
+    {
+      "UVA": 81,
+      "butler": 45
+    },
+    {
+      "iowa st": 87,
+      "AR little rock": 85
+    },
+    {
+      "gonzaga": 68,
+      "utah": 52
+    },
+    {
+      "mid tennessee": 7,
+      "syracuse": 60
+    }
+  ],
+  "Round_3": [
+    {
+      "kansas": 68,
+      "maryland": 52
+    },
+    {
+      "miami": 68,
+      "villanova": 520
+    },
+    {
+      "oregon": 68,
+      "duke": 52
+    },
+    {
+      "texas a&m": 68,
+      "oklahoma": 77
+    },
+    {
+      "unc": 680,
+      "indiana": 77
+    },
+    {
+      "notre dame": 680,
+      "wisconsin": 77
+    },
+    {
+      "UVA": 680,
+      "iowa st": 77
+    },
+    {
+      "gonzaga": 68,
+      "syracuse": 77
+    }
+  ],
+  "Round_4": [
+    {
+      "kansas": 68,
+      "villanova": 77
+    },
+    {
+      "oregon": 68,
+      "oklahoma": 77
+    },
+    {
+      "unc": 688,
+      "notre dame": 77
+    },
+    {
+      "UVA": 68,
+      "syracuse": 77
+    }
+  ]
+}
